@@ -6,18 +6,18 @@ int main(){
     getline(cin, s);
 
     int start=0;
-    int maxlength=0;
-    string max="";
+    int minlength=s.length();
+    string min="";
     for(int i=0; i<= s.length(); i++){
         if(s[i]==' ' || i==s.length()){
             int length = i- start;
-            if(length> maxlength){
-                maxlength= length;
-                max=s.substr(start, length);
+            if(length< minlength){
+                minlength= length;
+                min=s.substr(start, length);
             }
             start =i+1;
         }
     }
-    cout<<max<<endl<<maxlength;
+    cout<<"shortest substring is: "<<min<<endl<<"Length of shortest substring is: "<<minlength;
     return 0;
 }
