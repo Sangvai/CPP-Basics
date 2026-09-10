@@ -15,14 +15,15 @@ void printArray(int arr[], int n){
 }
 
 int main(){
-    int arr[]={1, 2, 3, 4, 5};
-    int brr[]  ={6, 7, 8, 9, 10};   
-    int n= sizeof(arr)/sizeof(int);
-    int p= sizeof(brr)/sizeof(int);
-    swapAlternate(brr, p);
+    int n, arr[100];
+    cin>>n;
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+    }
+    
     swapAlternate(arr, n);
     printArray(arr, n);
-    printArray(brr, p);
+    
     return 0;
 
 }
